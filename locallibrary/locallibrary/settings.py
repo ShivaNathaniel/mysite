@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+<<<<<<< HEAD
 # contains all the website settings,
 # including registering any applications we create,the location of our static files,
 # database configuration details, etc.
@@ -20,6 +21,11 @@ import os
 
 load_dotenv()
 
+=======
+
+from pathlib import Path
+
+>>>>>>> 61a81d6 (Django Tutorial Part 2: Creating a skeleton website)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,7 +35,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-5%9u@c62273w1k6+iml81c1tx^b#!552vhv9w5)yghdt*c9m&$'
+<<<<<<< HEAD
 SECRET_KEY = os.getenv("SECRET_KEY")
+=======
+
+>>>>>>> 61a81d6 (Django Tutorial Part 2: Creating a skeleton website)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,7 +47,11 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+<<<<<<< HEAD
 # Define applications that include in project
+=======
+
+>>>>>>> 61a81d6 (Django Tutorial Part 2: Creating a skeleton website)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -85,11 +99,19 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         'HOST': os.getenv("DB_HOST"),
         'USER': os.getenv("DB_USER"),
         'NAME': os.getenv("DATABASE"),
         'PASSWORD': os.getenv("DB_PASSWORD"),
         'PORT': os.getenv("DB_PORT"),
+=======
+        'NAME': 'my_database',
+        'USER': 'root',
+        'PASSWORD': '001202012432',
+        'HOST': 'localhost',
+        'PORT': '3306',
+>>>>>>> 61a81d6 (Django Tutorial Part 2: Creating a skeleton website)
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
