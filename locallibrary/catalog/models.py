@@ -1,8 +1,7 @@
-from django.db import models
-import uuid  # Required for unique book instances.
+import uuid  # Required for unique book instances
+from django.db import models.
 from django.urls import reverse  # Used to generate URLs by reversing the URL patterns.
 from django.utils.translation import gettext as _
-
 
 # Create your models here.
 class Genre(models.Model):
